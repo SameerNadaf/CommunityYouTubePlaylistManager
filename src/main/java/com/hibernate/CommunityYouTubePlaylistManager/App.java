@@ -140,6 +140,7 @@ public class App
         }
 	}
 	
+	
 	private static void exit() throws InterruptedException {
 		System.out.println();
 		System.out.print("Exiting Community YouTube Playlist Manager");
@@ -151,6 +152,6 @@ public class App
         }
         System.out.println();
         System.out.println("Thank you for using Community YouTube Playlist Manager.");
-	}
+	}	
 	
 }

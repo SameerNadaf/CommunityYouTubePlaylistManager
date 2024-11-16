@@ -1,6 +1,5 @@
 package com.hibernate.CommunityYouTubePlaylistManager;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,61 +20,18 @@ public class PersonDOA {
 			
 			System.out.println();
 			System.out.print("Enter Person Name: ");
-	        String personName = scanner.next();
+	        String name = scanner.next();
 	        System.out.print("Enter Person Email: ");
-	        String personEmail = scanner.next();
+	        String email = scanner.next();
 	        
 	        Person person = new Person();
-	        person.setName(personName);
-	        person.setEmail(personEmail);
-	        
-	        System.out.println();
-	        System.out.print("How many categories you want to add: ");
-	        int categoryCount = scanner.nextInt();
-	        List<Category> categories = new ArrayList<>();
-	        
-	        for (int i = 0; i < categoryCount; i++) {
-	            System.out.print("Enter Category Name: ");
-	            String categoryName = scanner.next();
-
-	            Category category = new Category();
-	            category.setName(categoryName);
-	            category.setPerson(person);
-
-	            System.out.println();
-	            System.out.print("How many YouTube links for this category you want to add: ");
-	            int linkCount = scanner.nextInt();
-	            List<YouTubeLinks> ytLinks = new ArrayList<>();
-
-	            for (int j = 0; j < linkCount; j++) {
-	                System.out.print("Enter YouTube URL: ");
-	                String ytUrl = scanner.next();
-	                System.out.print("Enter Video Title: ");
-	                String title = scanner.next();
-	                System.out.print("Enter Video status: ");
-	                String status = scanner.next();
-	                System.out.print("Enter rating (1-10): ");
-	                int rating = scanner.nextInt();
-
-	                YouTubeLinks ytLink = new YouTubeLinks();
-	                ytLink.setUrl(ytUrl);
-	                ytLink.setTitle(title);
-	                ytLink.setStatus(status);
-	                ytLink.setRating(rating);
-	                ytLink.setCategory(category);
-
-	                ytLinks.add(ytLink);
-	            }
-
-	            category.setYtLinks(ytLinks);
-	            categories.add(category);
-	        }
-
-	        person.setCategories(categories);
+	        person.setName(name);
+	        person.setEmail(email);
 
 	        session.persist(person);
 	        tx.commit();
 	        
+	        System.out.println();
 	        System.out.println("Transaction committed.");	        
 	        System.out.println();
 	        
