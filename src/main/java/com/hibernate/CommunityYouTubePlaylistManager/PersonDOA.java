@@ -116,6 +116,7 @@ public class PersonDOA {
                         System.out.println("    YouTube Rating: " + ytLink.getRating());
                     }
                 }
+                System.out.println();
                 System.out.println("-----------------------------------------");
             }
             else {

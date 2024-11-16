@@ -28,7 +28,8 @@ public class App
             	System.out.println("1. Manage Persons");
                 System.out.println("2. Manage Categories");
                 System.out.println("3. Manage YouTube Links");
-                System.out.println("4. Exit");
+                System.out.println("4. Manage Friends");
+                System.out.println("5. Exit");
                 System.out.print("Choose an option: ");
                 int option = scanner.nextInt();
                 switch (option) {
@@ -42,6 +43,9 @@ public class App
                     	manageYouTubeLinks(factory, scanner);
                         break;
                     case 4:
+                    	manageFriends(factory, scanner);
+                        break;
+                    case 5:
                     	exit();
                         scanner.close();
                         return;
@@ -140,6 +144,33 @@ public class App
         }
 	}
 	
+	private static void manageFriends(SessionFactory factory2, Scanner scanner) {
+		while (true) {          	
+        	System.out.println();
+        	System.out.println("1. Add friend");
+            System.out.println("2. View my friends");
+            System.out.println("3. Remove friend");
+            System.out.println("4. Back");
+            System.out.print("Choose an option: ");
+            int option = scanner.nextInt();
+            switch (option) {
+                case 1:
+                    FriendsDOA.addFriend(factory, scanner);
+                    break;
+                case 2:
+                	FriendsDOA.viewFriends(factory, scanner);
+                    break;
+                case 3:
+                	FriendsDOA.removeFriend(factory, scanner);
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalid option! Try again.");
+                    break;
+            }
+        }
+	}	
 	
 	private static void exit() throws InterruptedException {
 		System.out.println();
