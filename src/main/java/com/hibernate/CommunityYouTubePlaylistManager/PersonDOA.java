@@ -32,7 +32,7 @@ public class PersonDOA {
 	        tx.commit();
 	        
 	        System.out.println();
-	        System.out.println("Transaction committed.");	        
+	        System.out.println("Person saved successfully.");	        
 	        System.out.println();
 	        
 		} catch (Exception e) {
@@ -155,7 +155,7 @@ public class PersonDOA {
             	person.setEmail(mail);
             	session.merge(person);
             	tx.commit();
-            	System.out.println("Transaction committed.");
+            	System.out.println("Person details updated successfully.");
             }
             else {
 	    		System.out.println();
@@ -189,7 +189,7 @@ public class PersonDOA {
             if (person != null) {
             	session.remove(person);
             	tx.commit();
-            	System.out.println("Transaction committed.");
+            	System.out.println("Person deleted successfully.");
             }
             else {
 	    		System.out.println();

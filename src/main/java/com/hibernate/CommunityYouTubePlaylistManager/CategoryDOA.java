@@ -40,7 +40,7 @@ public class CategoryDOA {
 			session.persist(category);
 			tx.commit();
 			System.out.println();
-	        System.out.println("Transaction committed.");
+			System.out.println("Category saved successfully.");
 			
 		} catch (Exception e) {
 			if (tx != null) {

@@ -174,7 +174,7 @@ public class App
 	
 	private static void exit() throws InterruptedException {
 		System.out.println();
-		System.out.print("Exiting Community YouTube Playlist Manager");
+		System.out.print("Exiting");
         int i = 5;
         while (i!=0) {
             System.out.print(".");
