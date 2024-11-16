@@ -77,7 +77,6 @@ public class FriendsDOA {
 			         System.out.println("Friends of Person ID: " + id);
 			         
 		        	 for (Person friend : person.getFriends()) { 
-		                 System.out.println();
 		                 System.out.println("-----------------------------------------");
 		                 System.out.println("Friend ID: " + friend.getId());
 		                 System.out.println("Friend Name: " + friend.getName());
@@ -98,6 +97,7 @@ public class FriendsDOA {
 		                     }
 		                 }
 		                 System.out.println("-----------------------------------------");
+		                 System.out.println();
 		            }
 		        }
 		    } 
@@ -106,7 +106,6 @@ public class FriendsDOA {
 		        System.out.println();
 		        System.out.println("No person found with ID " + id);
 		    }
-		    System.out.println();
 		} catch (Exception e) {
 		    System.out.println("Error occurred: " + e.getMessage());
 		    e.printStackTrace();
