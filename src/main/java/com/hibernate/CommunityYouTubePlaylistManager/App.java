@@ -61,9 +61,9 @@ public class App
     }
 
 	private static void managePersons(SessionFactory factory, Scanner scanner) {
-		while (true) {          	
-        	System.out.println();
-        	System.out.println("1. Add person");
+	    while (true) {          	
+	    System.out.println();
+            System.out.println("1. Add person");
             System.out.println("2. View All persons");
             System.out.println("3. View Specific person");
             System.out.println("4. Update person");
